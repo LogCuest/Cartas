@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cartomancer Pro</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>🎴 Cartomancer</h1>
+
+<label>Nivel:</label>
+<input type="number" id="level" min="1" max="20" value="1"><br><br>
+
+<br><br>
+
+<label>Nivel del conjuro:</label>
+<select id="spellLevel">
+  <option value="1">Nivel 1</option>
+  <option value="2">Nivel 2</option>
+  <option value="3">Nivel 3</option>
+  <option value="4">Nivel 4</option>
+  <option value="5">Nivel 5</option>
+</select>
+
+<input type="search" id="spellSearch" placeholder="Buscar conjuro">
+<select id="spellSelect"></select>
+
+<button id="addSpellButton" type="button">➕ Añadir conjuro</button>
+
+<br><br>
+
+<label>Arquetipo:</label>
+<select id="archetype">
+  <option value="anima">Ánima</option>
+  <option value="convergencia">Convergencia</option>
+  <option value="doublelift">Doublelift</option>
+  <option value="brillo">Brillo</option>
+  <option value="hogar">Hogar</option>
+  <option value="hexawan">Hexawan</option>
+  <option value="kinesis">Kinesis</option>
+  <option value="miseri">Miseri</option>
+  <option value="phalanx">Phalanx</option>
+  <option value="slashfik">Slashfik</option>
+</select>
+
+<div id="selectedSpells"></div>
+
+<button id="buildDeckButton" type="button">Crear Mazo</button>
+
+<hr>
+
+<button id="drawHandButton" type="button">Robar Mano</button>
+<button id="drawFullHandButton" type="button">Robar hasta llenar</button>
+<button id="shortRestButton" type="button">Descanso Corto 💤</button>
+<button id="longRestButton" type="button">Descanso Largo 🌙</button>
+
+<div id="appNotice" class="notice" role="status" aria-live="polite"></div>
+
+<div class="save-panel">
+  <button id="saveGameButton" type="button">💾 Guardar</button>
+  <button id="loadGameButton" type="button">📂 Cargar</button>
+  <button id="deleteSaveButton" type="button">🗑 Borrar guardado</button>
+  <div id="saveStatus"></div>
+</div>
+
+<h2>📊 Estado del Mazo</h2>
+<div id="deckInfo"></div>
+
+<h2>🖐 Mano</h2>
+<div id="hand"></div>
+
+<h2>🔥 Quemadas</h2>
+<div id="burned"></div>
+
+<h2>🗑 Descartadas</h2>
+<div id="discard"></div>
+
+<script src="js.js"></script>
+
+</body>
+</html>
